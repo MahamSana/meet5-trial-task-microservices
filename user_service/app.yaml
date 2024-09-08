@@ -1,0 +1,14 @@
+runtime: java17
+instance_class: F2
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: prod
+  KAFKA_BOOTSTRAP_SERVERS: localhost:9092
+  USER_CREATION_LIMIT: 10
+  DATASTORE_PROJECT_ID: meet5-trial-task
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
+  cpu_utilization:
+    target_utilization: 0.6
